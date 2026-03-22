@@ -61,8 +61,9 @@
             </div>
           </Transition>
 
-          <!-- Detect Button -->
+          <!-- Action Buttons -->
           <button 
+            v-if="!result"
             @click="onDetectClick"
             :disabled="!file || loading"
             class="w-full relative py-4 px-4 font-semibold text-white rounded-xl shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 flex items-center justify-center gap-2 overflow-hidden"
@@ -79,6 +80,15 @@
               <Loader2Icon class="w-5 h-5 animate-spin" />
               Analyzing Image...
             </span>
+          </button>
+          
+          <button 
+            v-else
+            @click="handleReset"
+            class="w-full relative py-4 px-4 font-semibold text-gray-700 dark:text-zinc-300 bg-white dark:bg-zinc-900 border border-gray-300 dark:border-zinc-700 rounded-xl shadow-sm hover:bg-gray-50 dark:hover:bg-zinc-800 transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 flex items-center justify-center gap-2"
+          >
+            <RotateCcwIcon class="w-5 h-5" />
+            Try another image
           </button>
         </div>
 
@@ -108,17 +118,6 @@
                 <DetectionTable 
                   :detections="result.detections" 
                 />
-              </div>
-
-              <!-- Try another image button -->
-              <div class="w-full flex justify-center pt-4 pb-8 border-t border-gray-200 dark:border-zinc-800/80">
-                <button 
-                  @click="handleReset"
-                  class="flex items-center gap-2 px-6 py-3 text-sm font-semibold text-gray-700 dark:text-zinc-300 bg-white dark:bg-zinc-900 border border-gray-300 dark:border-zinc-700 rounded-xl hover:bg-gray-50 dark:hover:bg-zinc-800 shadow-sm transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-offset-zinc-900"
-                >
-                  <RotateCcwIcon class="w-4 h-4" />
-                  Try another image
-                </button>
               </div>
             </div>
           </Transition>
