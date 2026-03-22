@@ -1,2 +1,0 @@
-﻿[90m[[90mnuxt:tailwindcss[90m][39m [36mΓä╣[39m Using default Tailwind CSS file
-nuxt.config.ts(18,16): error TS2591: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node` and then add 'node' to the types field in your tsconfig.
