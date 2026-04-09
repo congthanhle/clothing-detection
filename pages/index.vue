@@ -127,16 +127,6 @@
       <!-- Add the new Image Gallery at the bottom of main -->
       <ImageGallery />
     </main>
-
-
-    <!-- Footer -->
-    <footer class="w-full py-6 mt-auto border-t border-gray-200 dark:border-zinc-800 bg-white dark:bg-zinc-900">
-      <div class="max-w-7xl mx-auto px-4 flex items-center justify-center">
-        <p class="text-sm text-gray-500 dark:text-zinc-500 font-medium tracking-wide">
-          Built with Django + Nuxt + Supabase &middot; Course Demo
-        </p>
-      </div>
-    </footer>
   </div>
 </template>
 
